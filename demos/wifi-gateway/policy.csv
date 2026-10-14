@@ -1,0 +1,30 @@
+pattern,category,action,reason
+casino-example.test,Gambling,block,Gambling websites are blocked on public Wi-Fi to reduce financial risk.
+sportsbet-example.test,Gambling,block,Gambling websites are blocked on public Wi-Fi to reduce financial risk.
+paypal.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+paytm.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+phonepe.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+googlepay.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+gpay.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+sbi.co.in,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+icicibank.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+hdfcbank.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+axisbank.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+kotak.com,Banking / Payments,block,Banking and payment websites are blocked on public Wi-Fi to reduce the risk of credential theft and financial fraud.
+video-stream.example,Streaming Media,warn,Streaming media may consume high bandwidth and increase tracking risk.
+music-stream.example,Streaming Media,warn,Streaming media may consume high bandwidth and increase tracking risk.
+youtube.com,Streaming Media,warn,Streaming media may consume high bandwidth and increase tracking risk.
+instagram.com,Social Networking,warn,Social networking platforms can increase privacy risks on public Wi-Fi.
+tiktok.com,Social Networking,warn,Social networking platforms can increase privacy risks on public Wi-Fi.
+facebook.com,Social Networking,warn,Social networking platforms can increase privacy risks on public Wi-Fi.
+download-malware.test,Malware,block,Malware domains are blocked to protect devices.
+infected-files.test,Malware,block,Malware domains are blocked to protect devices.
+secure-login-verify.test,Phishing,block,Phishing domains are blocked to protect users.
+account-update-now.test,Phishing,block,Phishing domains are blocked to protect users.
+xj29kq-newdomain.xyz,New Domains,block,Newly registered domains are blocked due to higher risk.
+fresh-site-2026.xyz,New Domains,block,Newly registered domains are blocked due to higher risk.
+gmail.com,Uncategorised,allow,Email services are allowed but users should avoid sensitive actions on public Wi-Fi.
+github.com,Uncategorised,allow,Developer and educational platforms are allowed on public Wi-Fi.
+google.com,Uncategorised,allow,General web access is allowed under public Wi-Fi usage policies.
+wikipedia.org,Uncategorised,allow,Educational websites are allowed on public Wi-Fi.
+example.com,Uncategorised,allow,Allowed by policy.

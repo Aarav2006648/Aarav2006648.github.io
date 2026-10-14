@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Secure Public Wi-Fi Gateway Demo | Aarav Pawan Chhoja</title>
+  <meta name="description" content="Live demo of a secure public Wi-Fi captive portal prototype built by Aarav Pawan Chhoja: session tokens, timed access and policy-based site filtering." />
+  <link rel="canonical" href="https://aarav2006648.github.io/demos/wifi-gateway/" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">
+      <div class="logo">🛡️</div>
+      <div>
+        <div class="brand-title">Secure Public Wi-Fi Gateway</div>
+        <div class="brand-sub">Prototype: session token + timeout + CSV-based category filtering</div>
+      </div>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center"><a href="../../#project-gateway" style="color:inherit;font-size:13px;opacity:.8">&larr; Back to portfolio</a><div class="pill" id="pillState">Not connected</div></div>
+  </div>
+
+  <main class="wrap">
+
+    <!-- STEP 1 -->
+    <section class="card" id="step-accept">
+      <div class="card-head">
+        <h1>Connect safely</h1>
+        <p class="muted">This simulates a captive portal shown before internet access is granted.</p>
+      </div>
+
+      <div class="notice">
+        <h3>Safety notice</h3>
+        <ul>
+          <li>Public Wi-Fi can expose traffic to interception and fake hotspots.</li>
+          <li>Avoid sensitive logins (banking / payments) when possible.</li>
+          <li>Prefer HTTPS sites and keep your device updated.</li>
+        </ul>
+      </div>
+
+      <label class="check">
+        <input type="checkbox" id="agree" />
+        <span>I understand the risks and agree to use this Wi-Fi responsibly.</span>
+      </label>
+
+      <div class="actions">
+        <button class="btn primary" id="btnStart" disabled>Start Secure Session</button>
+      </div>
+
+      <div class="footnote muted">
+        Website rules are loaded dynamically from <strong>policy.csv</strong>.
+      </div>
+    </section>
+
+    <!-- STEP 2 -->
+    <section class="card hidden" id="step-session">
+      <div class="card-head">
+        <h1>Session active</h1>
+        <p class="muted">Allowed sites redirect automatically. Blocked sites end the session after repeated attempts.</p>
+      </div>
+
+      <div class="grid">
+        <div class="mini">
+          <div class="mini-label">Session token</div>
+          <div class="mono" id="token">—</div>
+          <button class="btn ghost" id="btnCopy">Copy token</button>
+        </div>
+
+        <div class="mini">
+          <div class="mini-label">Time remaining</div>
+          <div class="mono" id="timeLeft">—</div>
+          <div class="mini-label">Policy strikes</div>
+          <div class="mono"><span id="strikes">0</span>/3</div>
+        </div>
+      </div>
+
+      <hr class="hr" />
+
+      <div class="panel">
+        <div class="panel-title">Quick test sites</div>
+        <div class="site-list" id="siteList"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Manual check</div>
+        <div class="row">
+          <input id="urlInput" placeholder="example.com or https://example.com" />
+          <button class="btn" id="btnGo">Check</button>
+        </div>
+      </div>
+
+      <div class="result hidden" id="result"></div>
+
+      <div class="actions right">
+        <button class="btn danger" id="btnEnd">End session</button>
+      </div>
+    </section>
+
+    <!-- STEP 3 -->
+    <section class="card hidden" id="step-expired">
+      <div class="card-head">
+        <h1>Session expired</h1>
+        <p class="muted">Time-limited access reduces exposure to cyber risks.</p>
+      </div>
+      <div class="actions">
+        <button class="btn primary" id="btnRestart">Reconnect securely</button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer muted">
+    Prototype demonstration only. Real deployments would enforce filtering at DNS or gateway level.
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
